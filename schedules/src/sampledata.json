@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Ali Mohyudin",
+        "type": "admin",
+        "gender": "male",
+        "email": "v5Q6j@example.com",
+        "phone": "1234567890",
+        "address": "123 Main St",
+        "password": "password",
+        "status": "active",
+        "createdAt": "2024-01-01T00:00:00.000Z",
+        "updatedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "name": "Ahmad Mohyudin",
+        "type": "user",
+        "gender": "male",
+        "email": "v5Q7j@example.com",
+        "phone": "1234567880",
+        "address": "123 Main St",
+        "password": "password",
+        "status": "active",
+        "createdAt": "2024-01-01T00:00:00.000Z",
+        "updatedAt": "2024-01-01T00:00:00.000Z"
+    }
+]

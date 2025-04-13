@@ -1,0 +1,28 @@
+image: node:16.20.2
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Build and Deploy
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build
+
+            # Set up variables
+            - export SFTP_USER=frontend-user@mcquare.com
+            - export SFTP_HOST=ftp.mcquare.com
+            - export SFTP_PORT=21
+            - export SFTP_TARGET_DIR=/
+
+            # Upload files to the server using lftp
+            - pipe: atlassian/ftp-deploy:0.6.0
+              variables:
+                USER: $SFTP_USER
+                PASSWORD: $SFTP_PASSWORD
+                SERVER: $SFTP_HOST
+                REMOTE_PATH: $SFTP_TARGET_DIR
+                DEBUG: 'true'
+                LOCAL_PATH: 'dist/'

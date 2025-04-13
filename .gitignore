@@ -1,0 +1,6 @@
+.vscode
+**/.env.prod
+**/node_modules
+db
+consumer-logs.txt
+.vscode/sftp.json
